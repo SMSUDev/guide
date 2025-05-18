@@ -1,71 +1,58 @@
 ---
 title: Introduction
-description: "Welcome to the home of your new documentation"
+description: "SMSU One Stop Guide สโมสรนักศึกษาแพทย์ศิริราช (สพศ.)"
+icon: "book-open"
+mode: "custom"
 ---
 
+export const HeroCard = ({ filename, title, description, href }) => {
+  return (
+    <a className="group cursor-pointer pb-8" href={href}>
+      <img src={`https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/hero/${filename}.png`} className="block dark:hidden pointer-events-none group-hover:scale-105 transition-all duration-100" />
+      <img src={`https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/hero/${filename}-dark.png`} className="pointer-events-none group-hover:scale-105 transition-all duration-100 hidden dark:block" />
+      <h3 className="mt-5 text-gray-900 dark:text-zinc-50 font-medium">{title}</h3>
+      <p className="mt-1.5">
+        {description}
+      </p>
+    </a>
+  )
+}
+
+<div className="relative">
+<div className="absolute top-0 lg:-top-16 left-0 right-0">
 <img
-  className="block dark:hidden"
-  src="/images/hero-light.png"
-  alt="Hero Light"
+  src="/images/hero/background-light.png"
+  className="block dark:hidden pointer-events-none"
 />
 <img
-  className="hidden dark:block"
-  src="/images/hero-dark.png"
-  alt="Hero Dark"
+  src="/images/hero/background-dark.png"
+  className="hidden dark:block pointer-events-none"
 />
 
-## Setting up
+</div>
 
-The first step to world-class documentation is setting up your editing environments.
+<div className="px-4 py-16 lg:py-48 lg:pb-24 max-w-3xl mx-auto">
+<h1 className="text-4xl font-medium text-center text-gray-900 dark:text-zinc-50 tracking-tight">
+Documentation
 
-<CardGroup cols={2}>
-  <Card
-    title="Edit Your Docs"
-    icon="pen-to-square"
-    href="https://mintlify.com/docs/quickstart"
-  >
-    Get your docs set up locally for easy development
-  </Card>
-  <Card
-    title="Preview Changes"
-    icon="image"
-    href="https://mintlify.com/docs/development"
-  >
-    Preview your changes before you push to make sure they're perfect
-  </Card>
-</CardGroup>
+</h1>
 
-## Make it yours
+<p className="max-w-xl mx-auto px-4 mt-4 text-lg text-center text-gray-500 dark:text-zinc-500">
+Meet the next generation of documentation. AI-native, beautiful out-of-the-box, and built for developers.
 
-Update your docs to your brand and add valuable content for the best user conversion.
+</p>
 
-<CardGroup cols={2}>
-  <Card
-    title="Customize Style"
-    icon="palette"
-    href="https://mintlify.com/docs/settings/global"
-  >
-    Customize your docs to your company's colors and brands
-  </Card>
-  <Card
-    title="Reference APIs"
-    icon="code"
-    href="https://mintlify.com/docs/api-playground/openapi"
-  >
-    Automatically generate endpoints from an OpenAPI spec
-  </Card>
-  <Card
-    title="Add Components"
-    icon="screwdriver-wrench"
-    href="https://mintlify.com/docs/content/components/accordions"
-  >
-    Build interactive features and designs to guide your users
-  </Card>
-  <Card
-    title="Get Inspiration"
-    icon="stars"
-    href="https://mintlify.com/customers"
-  >
-    Check out our showcase of our favorite documentation
-  </Card>
-</CardGroup>
+<div className="px-6 lg:px-0 mt-12 lg:mt-24 grid sm:grid-cols-2 gap-x-6 gap-y-4">
+<HeroCard filename="rocket" title="Quickstart" description="Deploy your first docs site in minutes with our step-by-step guide" href="/quickstart" />
+
+<HeroCard filename="cli" title="CLI installation" description="Install the CLI to preview and develop your docs locally" href="/installation" />
+
+<HeroCard filename="editor" title="Web editor" description="Make quick updates and manage content with our browser-based editor" href="/editor" />
+
+<HeroCard filename="components" title="Components" description="Build rich, interactive documentation with our ready-to-use components" href="/components" />
+
+</div>
+
+</div>
+
+</div>

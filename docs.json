@@ -1,41 +1,48 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "maple",
+  "name": "SMSU One Stop Guide",
   "colors": {
-    "primary": "#16A34A",
+    "primary": "#0FA462",
     "light": "#07C983",
     "dark": "#15803D"
+  },
+  "fonts": {
+    "family": "Bai Jamjuree"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "SOP",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "About",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "sop/index",
+              "sop/quicklinks"
             ]
           },
           {
-            "group": "Essentials",
+            "group": "โครงการ",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              {
+                "group": "เปิดโครงการ",
+                "icon": "book",
+                "pages": [
+                  "sop/project/open/index",
+                  "sop/project/open/doc/cover",
+                  "sop/project/open/doc",
+                  "sop/project/open/doc/finance",
+                  "sop/project/open/review"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        "tab": "API Reference",
+        "tab": "Management System",
         "groups": [
           {
             "group": "API Documentation",
@@ -53,27 +60,31 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "PD",
+        "groups": [
+          {
+            "group": "Technology",
+            "pages": [
+              "pd/tech/index"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "IT",
+        "groups": [
+          {
+            "group": "One Stop Guide",
+            "pages": [
+              "it/guide/index",
+              "it/guide/usage/index"
+            ]
+          }
+        ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -88,7 +99,7 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
+      "label": "Management System",
       "href": "https://dashboard.mintlify.com"
     }
   },
