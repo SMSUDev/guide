@@ -87,8 +87,8 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/smsuguide_light.svg",
+    "dark": "/logo/smsuguide_dark.svg"
   },
   "navbar": {
     "links": [
