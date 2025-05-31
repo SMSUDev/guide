@@ -18,10 +18,7 @@
         "groups": [
           {
             "group": "About",
-            "pages": [
-              "sop/index",
-              "sop/quicklinks"
-            ]
+            "pages": ["sop/index", "sop/quicklinks"]
           },
           {
             "group": "โครงการ",
@@ -31,43 +28,12 @@
                 "icon": "book",
                 "pages": [
                   "sop/project/open/index",
+                  "sop/project/open/write",
                   "sop/project/open/doc/cover",
                   "sop/project/open/doc",
-                  "sop/project/open/doc/finance",
-                  "sop/project/open/review"
+                  "sop/project/open/doc/finance"
                 ]
               }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Management System",
-        "groups": [
-          {
-            "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "PD",
-        "groups": [
-          {
-            "group": "Technology",
-            "pages": [
-              "pd/tech/index"
             ]
           }
         ]
@@ -79,7 +45,12 @@
             "group": "One Stop Guide",
             "pages": [
               "it/guide/index",
-              "it/guide/usage/index"
+              "it/guide/usage/index",
+              {
+                "group": "การแก้ไข",
+                "icon": "feather",
+                "pages": ["it/guide/edit/index"]
+              }
             ]
           }
         ]

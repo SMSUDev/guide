@@ -1,34 +1,33 @@
 ---
-title: เขียนเปิดโครงการ
+title: 'ขั้นตอนพิจารณาเปิดโครงการ'
 ---
 
-<Card title="เขียนโครงการและจดหมาย สพศ. ทุกครั้ง" icon="list-check" horizontal>
-  - ใช้ฟอนต์ "TH Sarabun PSK ขนาด 16"
-  - จัดหน้าให้ทุกบรรทัดเท่ากัน
-  - ตรวจสอบตัวสะกดให้ถูกต้องก่อนส่ง
-</Card>
+```mermaid
+flowchart TB
+  subgraph pre[ตรวจโครงการ]
+  sec(เลขาฯ ตรวจ
+  format และภาษา)
+  so(S&O ตรวจ objective)
+  rd(R&D ตรวจตัวชี้วัด)
+  end
+  subgraph committee[พิจารณาโครงการ]
+  check{ที่ประชุมพิจารณาโครงการ}
+  reject([สพศ.และประธานโครงการ
+  หาแนวทางแก้ไขร่วมกัน])
+  pass([ส่งงานกิจ])
+  end
+  prereject(ถ้าต้องมีการปรับ objective
+  หรือตัวชี้วัด S&O และ R&D
+  จะมีการพูดคุยและหาแนวทาง
+  แก้ไขร่วมกับประธานโครงการ)
+  member@{ shape: comment, label: "นายก, อุปฯบริหาร,
+  Finance, อุปฯอื่นที่เกี่ยวข้อง" }
 
-## เอกสารที่จำเป็นต้องใช้
-
-<Card
-  title="ใบปะหน้าเปิดโครงการ"
-  icon="file-lines"
-  href="/sop/project/open/doc/cover"
-  horizontal
->
-  หรือจดหมายขออนุมัติโครงการ
-</Card>
-<Card
-  title="ใบเปิดโครงการ"
-  icon="file-lines"
-  href="/sop/project/open/doc"
-  horizontal
-/>
-<Card
-  title="ใบเปรียบเทียบงบ"
-  icon="file-lines"
-  href="/sop/project/open/doc/finance"
-  horizontal
->
-  กรณ๊เป็นโครงการที่เคยจัดมาก่อน
-</Card>
+  sec --> rd
+  so --> rd
+  rd --> check
+  check -- ที่ประชุมไม่อนุมัติ --> reject
+  check -- ที่ประชุมอนุมัติ --> pass
+  pre -.-> prereject
+  committee ~~~ member
+```
