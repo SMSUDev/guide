@@ -1,0 +1,78 @@
+---
+title: 'Basic, Headers and Text'
+description: 'การใช้งาน Components สำเร็จรูป การจัดรูปแบบข้อความ และการแทรกสมการ'
+---
+
+## เริ่มใช้ Components สำเร็จรูป
+
+พิมพ์ `/` เพื่อแสดงรายการ components สำเร็จรูปที่สามารถเพิ่มได้ ![เพิ่ม components สำเร็จรูป](/images/it/guide/intro/3-compmenu.webp)
+
+## Headings
+
+หัวข้อ (Headings) แบ่งออกเป็น 3 ระดับ คือ Heading 1, Heading 2, และ Heading 3 ซึ่งมีขนาดตัวอักษรที่ลดลงตามลำดับ
+
+โดยปกติแล้ว **Heading 1** ใช้เป็นชื่อเรื่อง (Title) ที่แต่ละหน้ามีเพียงตำแหน่งเดียวเท่านั้น (ลูกศรเทา) ซึ่งในกรณีนี้ เราได้ตั้งค่าไปใน[จัดการหน้าเนื้อหา](/it/guide/edit/pages)เรียบร้อยแล้ว
+
+ให้ใช้ **Heading 2 เป็นหัวข้อหลัก** (ลูกศรชมพู) และ **Heading 3 เป็นหัวข้อย่อย** (ลูกศรม่วง) ของเนื้อหาเท่านั้น
+
+<Tip>
+  สามารถสร้าง Heading อย่างรวดเร็วเมื่อขึ้นบรรทัดใหม่ ด้วยการพิมพ์ `##` \+ เว้นวรรค สำหรับ Heading 2
+  หรือพิมพ์ `###` \+ เว้นวรรค สำหรับ Heading 3
+</Tip>
+
+![ตัวอย่าง Heading 2 และ Heading 3](/images/it/guide/components/1-headers.webp)
+
+## Text Formatting
+
+คลุมข้อความที่ต้องการเพื่อเปลี่ยนรูปแบบข้อความ
+
+| **Format**    | **Shortcut**             | **Result**             |
+| ------------- | ------------------------ | ---------------------- |
+| Bold          | `Ctrl/Cmd`\+`B`          | **bold**               |
+| Italic        | `Ctrl/Cmd`\+`I`          | _italic_               |
+| Underline     | `Ctrl/Cmd`\+`U`          | <u>underline</u>       |
+| Strikethrough | `Ctrl/Cmd`\+`Shift`\+`S` | ~~strikethrough~~      |
+| Code          | `Ctrl/Cmd`\+`E`          | `code`                 |
+| Link          | `Ctrl/Cmd`\+`K`          | [link](#)              |
+| Superscript   | -                        | <sup>superscript</sup> |
+| Subscript     | -                        | <sub>subscript</sub>   |
+
+## Linking
+
+คลุมข้อความที่ต้องการแล้วกดไอคอนลิงก์ จะขึ้นช่องให้ใส่ลิงก์ที่ต้องการ
+
+- ลิงก์กับหน้าภายใน guide ฉบับนี้ ให้พิมพ์ `/` แล้วเลือกหน้าที่ต้องการลิงก์
+- ลิงก์กับ URL ภายนอก ให้วาง URL ลงไปได้เลย เช่น `https://google.com`
+
+<Warning>
+  ห้ามใส่ลิงก์ที่เป็น URL เต็มกับลิงก์ภายใน guide ฉบับนี้ เช่น `/sop/project/open`
+  <u>ห้าม</u>ใส่เป็น `https://guide.smsu.in.th/sop/project/open` เพราะจะทำให้กดลิงก์แล้วโหลดช้าลง
+</Warning>
+
+## Blockquotes
+
+มักใช้สำหรับข้อความคำพูด หรือยกตัวอย่างการเขียน
+
+> Example singleline blockquote
+
+> อาจารย์ ... คน
+>
+> เจ้าหน้าที่ ... คน
+>
+> นักศึกษาแพทย์ชั้นปีที่ 1 ... คน (ถ้าเป็นนศพ.ศิริราชให้เขียนแยกชั้นปี)
+
+## LaTeX
+
+LaTeX เป็นเครื่องมือที่ใช้พิมพ์สมการทางคณิตศาสตร์ สามารถใช้งาน [LaTeX Math Editor](https://cortexjs.io/mathfield/demo/) แล้วคัดลอก LaTeX มาใช้
+
+### Inline Math
+
+สมการที่แทรกในข้อความ เช่น $(a^2 + b^2 = c^2)$ เป็นต้น
+
+### Block Math
+
+สมการแบบเต็มบรรทัด
+
+$$
+\exists \, x \notin [0,1]
+$$
