@@ -9,12 +9,12 @@
     start_url: `${baseURL}/`,
     icons: [
       {
-        src: `${baseURL}/logo/web-app-manifest-192x192.png`,
+        src: `https://assets.smsu.in.th/guide/icon/web-app-manifest-192x192.png`,
         sizes: '192x192',
         type: 'image/png',
       },
       {
-        src: `${baseURL}/logo/web-app-manifest-512x512.png`,
+        src: `https://assets.smsu.in.th/guide/icon/web-app-manifest-512x512.png`,
         sizes: '512x512',
         type: 'image/png',
       },

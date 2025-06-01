@@ -23,6 +23,7 @@
           {
             "group": "โครงการ",
             "pages": [
+              "sop/project/index",
               {
                 "group": "เปิดโครงการ",
                 "icon": "book",
@@ -49,7 +50,13 @@
               {
                 "group": "การแก้ไข",
                 "icon": "feather",
-                "pages": ["it/guide/edit/index"]
+                "pages": [
+                  "it/guide/edit/index",
+                  "it/guide/edit/files",
+                  "it/guide/edit/pages",
+                  "it/guide/edit/sidebar",
+                  "it/guide/edit/components"
+                ]
               }
             ]
           }
