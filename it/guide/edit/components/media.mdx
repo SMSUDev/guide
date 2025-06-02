@@ -2,3 +2,138 @@
 title: 'Media'
 description: 'รูปภาพ วิดีโอ และการฝังสื่ออื่น ๆ ในหน้าเนื้อหา'
 ---
+
+## Image
+
+เลือก `Image` จากรายการ components สำเร็จรูป แล้วอัพโหลดไฟล์รูปภาพหรือเลือกจากไฟล์ที่มีอยู่แล้ว
+
+![ตัวอย่างรูปภาพ](/images/smsulogo-banner-wide.webp)
+
+## Frames
+
+เลือก `Frame` จากรายการ components สำเร็จรูป เพื่อสร้างกรอบสำหรับเนื้อหาภายใน เช่น รูปภาพ วิดีโอ หรือข้อความ
+
+ใน Web Editor กดจุดสามจุดด้านขวาของ `Frame` เพื่อใส่ caption หรือคำบรรยายของกรอบนั้น
+
+<Tip>สามารถใช้ `Frame` เพื่อสร้างรูปภาพพร้อมคำบรรยายด้านล่างได้</Tip>
+
+<Frame caption="ตัวอย่างรูปภาพพร้อมคำบรรยายด้านล่าง">
+  ![ตัวอย่างรูปภาพพร้อมคำบรรยาย](/images/smsulogo-banner-wide.webp)
+</Frame>
+
+## Embeds
+
+เลือก `Embed` จากรายการ components สำเร็จรูป แล้ววางโค้ดฝัง เช่น YouTube, Google Drive, หรือเว็บไซต์อื่น ๆ
+
+### YouTube
+
+<Steps>
+  <Step title="กด Share ใต้วิดีโอที่ต้องการฝัง">
+    ![กด Share ใต้ YouTube Video](/images/it/guide/components/3-yt-share.webp)
+  </Step>
+  <Step title="เลือก Embed">![เลือก Embed](/images/it/guide/components/4-yt-embed.webp)</Step>
+  <Step title="คัดลอกโค้ดฝัง">
+    ![คัดลอกโค้ดฝัง YouTube Video](/images/it/guide/components/5-yt-copy.webp)
+  </Step>
+  <Step title="วางโค้ดฝังหลังเลือก Embed ใน Web Editor">
+    หากเป็นไปได้ ให้ลบส่วน `width="XXX"` และ `height="XXX"` ออก แล้วเพิ่ม `className="w-full aspect-video rounded-xl"` แทน
+    เพื่อให้แสดงผลเต็มความกว้างของหน้าและมีอัตราส่วน 16:9
+    ```html {2-4}
+    <iframe
+      className="w-full aspect-video rounded-xl"
+      width="560"    <--- ลบออก
+      height="315"   <--- ลบออก
+      src="https://www.youtube.com/embed/tAIzWTdYr3M?si=m05AcjiJheZz957w"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    ```
+  </Step>
+  <Step title="หลังกด Save Changes จะได้ผลลัพธ์ดังตัวอย่างนี้">
+    <iframe
+      className="w-full aspect-video rounded-xl"
+      src="https://www.youtube.com/embed/o1Gzvgbvp68"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </Step>
+</Steps>
+
+### Google Drive
+
+คัดลอกโค้ดฝังด้านล่างนี้ แล้ววางใน Web Editor หลังเลือก `Embed` จากรายการ components สำเร็จรูป
+
+```html {3}
+<iframe
+  className="aspect-video w-full rounded-xl"
+  src="https://drive.google.com/file/d/FILE_ID/preview"
+  allow="autoplay"
+></iframe>
+```
+
+แทนที่ `FILE_ID` ด้วย ID ของไฟล์ที่ต้องการฝัง
+
+สามารถหา ID ของไฟล์จาก URL หลังกด Share แล้วคัดลอก โดยอยู่ระหว่าง `/d/` และ `/view` เช่น
+URL ด้านล่างมี ID คือ `1QtbUIFt6jiecFFEdnex-mGqR0VnJLvWY`
+
+```
+https://drive.google.com/file/d/1QtbUIFt6jiecFFEdnex-mGqR0VnJLvWY/view?usp=sharing
+```
+
+<Warning>
+  ห้ามวาง URL ที่คัดลอกมาจาก Google Drive หลังกด Share โดยตรง เพราะลงท้ายด้วย `/view`
+  ซึ่งไม่สามารถแสดงผลได้ ให้แก้เป็น `/preview` แทน
+</Warning>
+
+<iframe
+  className="aspect-video w-full rounded-xl"
+  src="https://drive.google.com/file/d/1QtbUIFt6jiecFFEdnex-mGqR0VnJLvWY/preview"
+  allow="autoplay"
+></iframe>
+
+### Google Calendar
+
+<Steps>
+  <Step title="กดจุดสามจุดด้านขวาของปฏิทินที่ต้องการฝัง">
+    ไปที่ [Google Calendar](https://calendar.google.com) แล้วเลือกปฏิทินที่ต้องการฝัง >
+    กดจุดสามจุดด้านขวา
+    ![เลือกปฏิทินที่ต้องการฝัง](/images/it/guide/components/6-calendar-3dots.webp)
+  </Step>
+  <Step title="เลือก Setting">
+    ![เลือก Setting](/images/it/guide/components/7-calendar-options.webp)
+  </Step>
+  <Step title="คัดลอกโค้ดฝัง">
+    เลื่อนหาส่วน "Integrate calendar" >
+    คัดลอกโค้ดฝังที่ "Embed code" ซึ่งขึ้นต้นด้วย `<iframe` แล้ววางใน Web Editor หลังเลือก `Embed`
+    ![คัดลอกโค้ดฝัง Google Calendar](/images/it/guide/components/8-calendar-embedcode.webp)
+  </Step>
+  <Step title="ปรับแต่งโค้ดฝัง">
+    ลบตัวแปรอื่นที่ไม่ใช่ `src` ออก เช่น `style`, `width`, `height`, `frameborder`, `scrolling` แล้วใส่ `className="aspect-[4/3] w-full rounded-xl"` เพิ่มแทน
+    ```html {2, 4-8}
+    <iframe
+      className="aspect-[4/3] w-full rounded-xl"
+      src="https://calendar.google.com/calendar/embed?src=c_73cc5a382031b63dbbcb857f622dac18632dfff5de367e8827a836e042b7ec64%40group.calendar.google.com&ctz=Asia%2FBangkok"
+      style="border: 0" <--- ลบออก
+      width="800"       <--- ลบออก
+      height="600"      <--- ลบออก
+      frameborder="0"   <--- ลบออก
+      scrolling="no"    <--- ลบออก
+    ></iframe>
+    ```
+    <Warning>
+      ถ้าไม่ปรับแต่งโค้ดฝังที่คัดลอกมา เมื่อ Save Changes แล้ว หน้านั้นจะ error
+    </Warning>
+  </Step>
+  <Step title="กด Save Changes จะได้ผลลัพธ์ดังตัวอย่างนี้">
+    <iframe
+      className="aspect-[4/3] w-full rounded-xl"
+      src="https://calendar.google.com/calendar/embed?src=c_73cc5a382031b63dbbcb857f622dac18632dfff5de367e8827a836e042b7ec64%40group.calendar.google.com&ctz=Asia%2FBangkok"
+    ></iframe>
+  </Step>
+</Steps>

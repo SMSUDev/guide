@@ -1,80 +1,139 @@
 ---
-title: Introduction
+title: Home
 description: 'SMSU One Stop Guide สโมสรนักศึกษาแพทย์ศิริราช (สพศ.)'
 icon: 'book-open'
 mode: 'custom'
 ---
 
-export const HeroCard = ({ filename, title, description, href }) => {
+export const HeroCard = ({ filename, title, description, href, span }) => {
   return (
     <a
-      className="group cursor-pointer pb-8"
+      className="group cursor-pointer rounded-2xl border border-[#0FA461]/25 bg-[#0FA461]/15 p-6 transition-colors hover:border-[#0FA461] hover:bg-[#0FA461]/25 sm:col-span-1"
+      style={{
+        gridColumn: span ? '1 / -1' : 'span 1',
+      }}
       href={href}
     >
-      <img
-        src={`https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/hero/${filename}.png`}
-        className="pointer-events-none block transition-all duration-100 group-hover:scale-105 dark:hidden"
-      />
-      <img
-        src={`https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/hero/${filename}-dark.png`}
-        className="pointer-events-none hidden transition-all duration-100 group-hover:scale-105 dark:block"
-      />
-      <h3 className="mt-5 font-medium text-gray-900 dark:text-zinc-50">{title}</h3>
-      <p className="mt-1.5">{description}</p>
+      {filename && (
+        <>
+          <img
+            src={`https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/hero/${filename}.png`}
+            className="pointer-events-none block transition-all duration-100 group-hover:scale-105 dark:hidden"
+          />
+          <img
+            src={`https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/hero/${filename}-dark.png`}
+            className="pointer-events-none hidden transition-all duration-100 group-hover:scale-105 dark:block"
+          />
+        </>
+      )}
+      <h3 className="font-medium text-gray-900 dark:text-zinc-50">{title}</h3>
+      <p className="mt-1.5 group-hover:text-[#0FA461]">{description}</p>
     </a>
   );
 };
 
+export const HeroCardGroup = ({ title, description, children }) => {
+  return (
+    <div className="flex flex-col">
+      <h2 className="text-2xl font-semibold text-gray-900 dark:text-zinc-50">{title}</h2>
+      {description && <span className="mt-1 text-gray-500 dark:text-zinc-500">{description}</span>}
+      <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">{children}</div>
+    </div>
+  );
+};
+
 <div className="relative">
-<div className="absolute top-0 lg:-top-16 left-0 right-0">
-{/* <img
-  src="/images/hero/background-light.png"
-  className="block dark:hidden pointer-events-none"
-/>
-<img
-  src="/images/hero/background-dark.png"
-  className="hidden dark:block pointer-events-none"
-/> */}
+  <div className="absolute -top-10 left-0 right-0 -z-10">
+    <img
+      src="/images/hero/header-bg.webp"
+      className="w-full block pointer-events-none opacity-50 dark:opacity-30"
+    />
+  </div>
 
-</div>
+  <div className="px-4 pt-16 sm:pt-20 max-w-3xl mx-auto">
+    <h1 className="text-4xl font-semibold text-center text-gray-900 dark:text-zinc-50 tracking-tight">
+      SMSU One Stop Guide
+    </h1>
 
-<div className="px-4 py-16 lg:py-48 lg:pb-24 max-w-3xl mx-auto">
-<h1 className="text-4xl font-medium text-center text-gray-900 dark:text-zinc-50 tracking-tight">
-Documentation
-
-</h1>
-
-<p className="max-w-xl mx-auto px-4 mt-4 text-lg text-center text-gray-500 dark:text-zinc-500">
-Meet the next generation of documentation. AI-native, beautiful out-of-the-box, and built for developers.
-
+<p className="mx-auto mt-4 max-w-xl px-4 text-center text-lg text-gray-500 dark:text-zinc-500">
+  แหล่งรวบรวมแนวทางและข้อมูลจากทุกฝ่ายในสโมสรนักศึกษาแพทย์ศิริราช (สพศ.)
+  ให้สะดวกต่อการค้นหาและใช้งาน
 </p>
 
-<div className="px-6 lg:px-0 mt-12 lg:mt-24 grid sm:grid-cols-2 gap-x-6 gap-y-4">
-<HeroCard filename="rocket" title="Quickstart" description="Deploy your first docs site in minutes with our step-by-step guide" href="/quickstart" />
+  <div className="px-6 lg:px-0 mt-12 lg:mt-16 flex flex-col gap-10">
 
-<HeroCard
-  filename="cli"
-  title="CLI installation"
-  description="Install the CLI to preview and develop your docs locally"
-  href="/installation"
-/>
+    <HeroCardGroup title="SOP" description="Standard Operating Procedures">
+      <HeroCard
+        title="Quick Links"
+        description="รวมลิงก์ใน SOP สำหรับใช้งานอย่างรวดเร็ว"
+        href="/sop/quicklinks"
+        span
+      />
+      <HeroCard
+        title="โครงการ"
+        description="การทำโครงการ เขียนเอกสารเปิด/ปิด"
+        href="/sop/project"
+      />
+      <HeroCard
+        title="ระบบจดหมาย"
+        description="การใช้งาน และ Flow ส่งจดหมาย"
+        href="/ms"
+      />
+      <HeroCard
+        title="PR"
+        description="การจองข่าว ขอทำกราฟิก ช่วยทำ Content"
+        href="/sop/pr"
+      />
+      <HeroCard
+        title="HR"
+        description="ระบบดูแลสมาชิกสพศ."
+        href="/sop/hr"
+      />
+    </HeroCardGroup>
 
-<HeroCard
-  filename="editor"
-  title="Web editor"
-  description="Make quick updates and manage content with our browser-based editor"
-  href="/editor"
-/>
+    {/* <HeroCardGroup title="Knowledge" description="by PD (Personal Development)">
+      <HeroCard
+        title="Metaskill"
+        description="คำอธิบาย"
+        href="/pd/metaskill"
+      />
+      <HeroCard
+        title="Economy"
+        description="คำอธิบาย"
+        href="/pd/economy"
+      />
+      <HeroCard
+        title="Technology"
+        description="คำอธิบาย"
+        href="/pd/technology"
+      />
+      <HeroCard
+        title="Social Responsibility"
+        description="คำอธิบาย"
+        href="/pd/social-responsibility"
+      />
+    </HeroCardGroup> */}
 
-<HeroCard
-  filename="components"
-  title="Components"
-  description="Build rich, interactive documentation with our ready-to-use components"
-  href="/components"
-/>
+    <HeroCardGroup title="การใช้งาน">
+      <HeroCard
+        title="แนะนำการใช้งาน"
+        description="เริ่มต้นใช้งาน One Stop Guide ฉบับนี้"
+        href="/it/guide/usage"
+      />
+      <HeroCard
+        title="แก้ไขเนื้อหา"
+        description="วิธีการแก้ไขหน้าเนื้อหา สำหรับสมาชิก สพศ."
+        href="/it/guide/edit"
+      />
+    </HeroCardGroup>
+
+  </div>
 
 </div>
 
-</div>
+<img
+  src="/images/hero/footer-bg.webp"
+  className="pointer-events-none block w-full opacity-50 dark:opacity-30"
+/>
 
 </div>
