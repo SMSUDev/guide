@@ -1,0 +1,64 @@
+---
+title: 'Accordions'
+description: 'Dropdown แสดงเนื้อหาที่สามารถยุบ/ขยายได้'
+---
+
+ใช้แสดงเนื้อหาที่สามารถยุบ/ขยายได้ เช่น FAQ (คำถามที่พบบ่อย) หรือเนื้อหาที่ต้องการให้ผู้ใช้งานสามารถเลือกอ่านตามความสนใจ
+
+## เพิ่ม Accordion
+
+สามารถเพิ่มโดยเลือกจาก[รายการ components](/it/guide/edit/components/basicblocks#เริ่มใช้-components)
+
+### Accordion Group
+
+สามารถเพิ่มโดยเลือก `Accordion Group` จาก[รายการ components](/it/guide/edit/components/basicblocks#เริ่มใช้-components) เพื่อสร้างกลุ่มของ Accordion ดังตัวอย่างด้านล่าง
+
+<AccordionGroup>
+  <Accordion title="FAQ without Icon">
+    Content
+  </Accordion>
+
+<Accordion
+  title="FAQ with Icon"
+  icon="comments-question"
+  iconType="solid"
+>
+  Content
+</Accordion>
+
+  <Accordion title="FAQ without Icon">
+    Content
+  </Accordion>
+</AccordionGroup>
+
+### เพิ่ม Accordion ใน Group
+
+เอาเมาส์ hover แล้วกด <Icon icon="plus"/> เครื่องหมายบวกด้านซ้ายของ Accordion ล่างสุด เพื่อเพิ่ม Accordion ใหม่ในกลุ่ม
+
+## แก้ไข Title, Description และ Icon
+
+เอาเมาส์ hover แล้วกด <Icon icon="ellipsis-vertical"/> สามจุดมุมขวาบนของ Accordion เพื่อเปิดเมนูแก้ไข สามารถตั้งค่า Title, Description, Icon และตั้งให้ Default Open ได้ตามต้องการ จากนั้นกด "Save Changes" เพื่อบันทึกการเปลี่ยนแปลง
+
+<Accordion
+  title="Title"
+  description="Description"
+  icon="sparkles"
+>
+  Content
+</Accordion>
+
+<Tip>
+  ไอคอนที่ใช้ในนี้มาจาก Font Awesome สามารถค้นหาไอคอนจาก [เว็บไซต์ Font
+  Awesome](https://fontawesome.com/icons) ได้โดยตรง (สามารถค้นหาได้ง่ายกว่า)
+  แล้วกดที่ชื่อไอคอนเพื่อคัดลอกมาใส่ในช่องค้นหาของ Web Editor
+
+  <u>หมายเหตุ</u> สามารถเลือกได้ทั้งไอคอนฟรี และไอคอนที่ติดแท็ก "Pro"
+</Tip>
+
+## แก้ไข Content
+
+กด Accordion เพื่อเปิด dropdown แล้วแก้ไขเนื้อหาภายในได้ตามต้องการ
+
+## ลบ Accordion
+
+เอาเมาส์ hover แล้วกด <Icon icon="ellipsis-vertical"/> สามจุดมุมขวาบนของ Accordion เพื่อเปิดเมนูแก้ไข จากนั้นกด <Icon icon="trash-can"/> ไอคอนถังขยะเพื่อลบ

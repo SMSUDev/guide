@@ -1,0 +1,49 @@
+---
+title: 'Cards'
+description: 'การ์ดลิงก์ การ์ดข้อความ และการ์ดรูปภาพ'
+---
+
+ใข้เป็นปุ่มลิงก์ไปยังหน้าเนื้อหาอื่น/เว็บไซต์ภายนอก หรือแสดงเนื้อหาสำคัญสั้น ๆ หรือแสดงรูปภาพพร้อมชื่อเรื่องและคำอธิบาย
+
+## เพิ่ม Card
+
+สามารถเพิ่มโดยเลือกจาก[รายการ components](/it/guide/edit/components/basicblocks#เริ่มใช้-components)
+
+<Card
+  title="Basic Card"
+  icon="heart"
+>
+  Description
+</Card>
+
+### Card Group
+
+สามารถเพิ่มโดยเลือก `Card Group` จาก[รายการ components](/it/guide/edit/components/basicblocks#เริ่มใช้-components) เพื่อสร้างกลุ่มการ์ดดังตัวอย่างด้านล่าง
+
+<Columns cols={2}>
+  <Card title="First Card" icon="sidebar">
+    This is the first card.
+  </Card>
+
+  <Card title="Second Card" icon="sidebar-flip">
+    This is the second card.
+  </Card>
+</Columns>
+
+### เพิ่ม Card ใน Group
+
+เอาเมาส์ hover แล้วกด <Icon icon="plus"/> เครื่องหมายบวกด้านซ้ายของ Card ล่างสุด เพื่อเพิ่ม Card ใหม่ในกลุ่ม
+
+## แก้ไขและตั้งค่า
+
+เอาเมาส์ hover แล้วกด <Icon icon="ellipsis-vertical"/> สามจุดมุมขวาบนของ Card เพื่อเปิดเมนูแก้ไข
+
+### Title
+
+แก้ไขที่ช่อง `Title`
+
+<Card title="Title">Content</Card>
+
+### Link Card
+
+ตั้ง Link URL ที่ช่อง `URL` และสามารถตั้ง
