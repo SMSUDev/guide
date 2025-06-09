@@ -1,0 +1,119 @@
+---
+title: 'Diagram'
+description: 'แผนภาพ แผนผัง หรือ Flow Chart'
+---
+
+สามารถสร้างแผนภาพโดยใช้ [Mermaid](https://mermaid.js.org/) ซึ่งเป็นเครื่องมือที่ใช้ในการสร้างแผนภาพ แผนผัง หรือ Flow Chart
+
+<CardGroup>
+  <Card
+    title="Mermaid Live Edit"
+    icon="frame"
+    href="https://mermaid.live/edit"
+  >
+    ใช้ preview โค้ด Mermaid ได้แบบเรียลไทม์
+  </Card>
+  <Card
+    title="Mermaid Playground"
+    icon="square-pen"
+    href="https://www.mermaidchart.com/play"
+  >
+    ใช้สร้าง Mermaid Diagram โดยไม่ต้องเขียนโค้ด
+  </Card>
+</CardGroup>
+
+<Tip>สามารถส่งภาพ Diagram ที่ต้องการสร้างมาให้ทีม IT ช่วยสร้างได้</Tip>
+
+หลังได้โค้ดจาก Editor แล้ว ให้นำมาใส่ในหน้าเนื้อหา
+
+<Steps>
+  <Step title="เปลี่ยน Web Editor เป็น Markdown Mode">
+    ![Markdown Editor](/images/it/guide/components/9-mdxeditor.webp)    
+  </Step>
+  <Step title="วางโค้ด Mermaid ลงในหน้าเนื้อหา">
+    เริ่มด้วย ` ```mermaid` และจบด้วย ` ``` `
+    
+    สามารถคัดลอกโค้ดด้านล่างไปวาง แล้วคัดลอกโค้ดจาก Editor แล้ววางแทนบรรทัดกลางได้เลย
+
+    ````md
+    ```mermaid
+    // Your mermaid code block here
+    ```
+    `````
+
+  </Step>
+  <Step title="หลังกลับมา Visual Mode จะเห็นเป็น Code Block ดังรูปด้านล่าง">
+    เมื่อ Publish แล้ว จะเห็นในหน้าเนื้อหาจริงเป็นแผนภาพตามโค้ดที่เขียนไว้ ไม่ต้องกังวลว่าจะแสดงเป็นโค้ด
+    ![Mermaid Diagram Code](/images/it/guide/components/10-backtovisualmode.webp)
+  </Step>
+</Steps>
+
+## ตัวอย่าง
+
+```mermaid
+flowchart TB
+  subgraph pre[ตรวจโครงการ]
+  sec(เลขาฯ ตรวจ
+  format และภาษา)
+  so(S&O ตรวจ objective)
+  rd(R&D ตรวจตัวชี้วัด)
+  end
+  subgraph committee[พิจารณาโครงการ]
+  check{ที่ประชุมพิจารณาโครงการ}
+  reject([สพศ.และประธานโครงการ
+  หาแนวทางแก้ไขร่วมกัน])
+  pass([ส่งงานกิจ])
+  end
+  prereject(ถ้าต้องมีการปรับ objective
+  หรือตัวชี้วัด S&O และ R&D
+  จะมีการพูดคุยและหาแนวทาง
+  แก้ไขร่วมกับประธานโครงการ)
+  member@{ shape: comment, label: "นายก, อุปฯบริหาร,
+  Finance, อุปฯอื่นที่เกี่ยวข้อง" }
+
+  sec --> rd
+  so --> rd
+  rd --> check
+  check -- ที่ประชุมไม่อนุมัติ --> reject
+  check -- ที่ประชุมอนุมัติ --> pass
+  pre -.-> prereject
+  committee ~~~ member
+```
+
+โค้ดที่เพิ่มในหน้า Markdown Mode
+
+````md
+```mermaid
+flowchart TB
+  subgraph pre[ตรวจโครงการ]
+  sec(เลขาฯ ตรวจ
+  format และภาษา)
+  so(S&O ตรวจ objective)
+  rd(R&D ตรวจตัวชี้วัด)
+  end
+  subgraph committee[พิจารณาโครงการ]
+  check{ที่ประชุมพิจารณาโครงการ}
+  reject([สพศ.และประธานโครงการ
+  หาแนวทางแก้ไขร่วมกัน])
+  pass([ส่งงานกิจ])
+  end
+  prereject(ถ้าต้องมีการปรับ objective
+  หรือตัวชี้วัด S&O และ R&D
+  จะมีการพูดคุยและหาแนวทาง
+  แก้ไขร่วมกับประธานโครงการ)
+  member@{ shape: comment, label: "นายก, อุปฯบริหาร,
+  Finance, อุปฯอื่นที่เกี่ยวข้อง" }
+
+  sec --> rd
+  so --> rd
+  rd --> check
+  check -- ที่ประชุมไม่อนุมัติ --> reject
+  check -- ที่ประชุมอนุมัติ --> pass
+  pre -.-> prereject
+  committee ~~~ member
+```
+````
+
+```
+
+```

@@ -46,4 +46,66 @@ description: 'การ์ดลิงก์ การ์ดข้อควา�
 
 ### Link Card
 
-ตั้ง Link URL ที่ช่อง `URL` และสามารถตั้ง
+ตั้ง Link URL ที่ช่อง `URL` และสามารถตั้งคำอธิบาย action ได้ที่ช่อง `Call To Action`
+
+<CardGroup cols={2}>
+  <Card
+    title="Link Card"
+    icon="sidebar"
+    href="https://lin.ee/hlvg4i9"
+  >
+    Basic Link Card
+  </Card>
+  <Card
+    title="ติดต่อเบิกเงิน"
+    icon="line"
+    href="https://lin.ee/hlvg4i9"
+  >
+    Line Official Account: SI Finance
+  </Card>
+  <Card
+    title="Link Card with CTA"
+    icon="sidebar"
+    href="https://drive.google.com/drive/folders/1F_qefEQ1M_r8FRJzMvdG5xqNRalWacAq?usp=drive_link"
+    cta="Call To Action"
+  >
+    Link Card with Call To Action
+  </Card>
+  <Card
+    title="อัตราราคากลาง"
+    icon="money-check-dollar"
+    href="https://drive.google.com/drive/folders/1F_qefEQ1M_r8FRJzMvdG5xqNRalWacAq?usp=drive_link"
+    cta="View Rates"
+  >
+    เรทราคาแต่ละรายการที่คณะอนุมัติให้โครงการเบิก
+  </Card>
+</CardGroup>
+
+### Horizontal card
+
+ตั้งค่าโดยเลื่อนเปิด `Horizontal` เพื่อแสดงการ์ดในแนวนอนเทียบกับไอคอนด้านซ้าย
+
+<Card
+  title="Horizontal Card"
+  icon="align-left"
+  horizontal
+>
+  Here is an example of a horizontal card
+</Card>
+
+### Image Card
+
+ตั้ง URL (สำหรับรูปภายนอก) หรือ path (สำหรับรูปที่อัพโหลดใน guide ฉบับนี้ในโฟลเดอร์ `/images`) ของรูปภาพที่ต้องการแสดงในช่อง `Image Path`
+
+ตัวอย่างการ์ดด้านล่างตั้งค่า `Image Path` เป็น `/images/smsulogo-banner-wide.webp`
+
+<Card
+  title="Image Card"
+  img="/images/smsulogo-banner-wide.webp"
+>
+  Here is an example of a card with an image
+</Card>
+
+## ลบ Card
+
+เอาเมาส์ hover แล้วกด <Icon icon="ellipsis-vertical"/> สามจุดมุมขวาบนของ Card เพื่อเปิดเมนูแก้ไข จากนั้นกด <Icon icon="trash-can"/> ไอคอนถังขยะเพื่อลบ

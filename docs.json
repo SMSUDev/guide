@@ -58,9 +58,11 @@
                   "it/guide/edit/components/basicblocks",
                   "it/guide/edit/components/listandtables",
                   "it/guide/edit/components/media",
-                  "it/guide/edit/components/callouts",
                   "it/guide/edit/components/accordions",
-                  "it/guide/edit/components/cards"
+                  "it/guide/edit/components/callouts",
+                  "it/guide/edit/components/cards",
+                  "it/guide/edit/components/diagram",
+                  "it/guide/edit/components/steps"
                 ]
               }
             ]
