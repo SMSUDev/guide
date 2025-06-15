@@ -1,5 +1,154 @@
 ---
-title: การทำโครงการ
+title: การดำเนินโครงการ
 description: 'ขั้นตอนและคำแนะนำในการทำโครงการ'
 icon: 'diagram-project'
 ---
+
+## ทำไมต้องเปิดโครงการ?
+
+1. มีความจำเป็นและต้องการใช้**งบประมาณ**คณะฯ ในการจัดกิจกรรม
+2. อยากให้**ชั่วโมงจัดกิจกรรม (AT)** สำหรับผู้จัดกิจกรรมหรือผู้เข้าร่วมกิจกรรม
+3. กิจกรรมที่ต้องได้รับการอนุมัติจากคณะ เช่น ขอสถานที่ ขอความร่วมมือกับทางหน่วยงานต่าง ๆ ในศิริราช
+
+## ขั้นตอนการดำเนินโครงการ
+
+<Steps>
+  <Step
+    title="ประธานโครงการ"
+    icon="user-tie"
+    iconType="solid"
+  />
+  <Step
+    title="เริ่มโครงการ"
+    icon="star"
+    iconType="solid"
+  >
+    1. คุยกับประธานโครงการปีที่แล้ว (ถ้ามี)
+    2. คุยกับอาจารย์ที่ปรึกษาโครงการ
+    3. รับ core team
+    4. คิดรายละเอียดกิจกรรม
+  </Step>
+  <Step
+    title="1st Meeting with SMSU"
+    stepNumber={1}
+  >
+    1. พูดคุยเรื่องเป้าหมาย แนวทางจัดกิจกรรม กับ**อุปนายกฝ่ายที่เกี่ยวข้อง**
+    2. อธิบายแนวทางการทำโครงการ
+    3. อธิบายการเขียนเอกสารโครงการ
+    4. ชี้แจงงบประมาณและฐานข้อมูล
+
+    <Card
+      title="Meeting with SMSU"
+      icon="comments-question-check"
+      href="/sop/project/meetsmsu"
+      horizontal
+    >
+      การเตรียมตัวก่อนมาคุย และการพูดคุยกับสพศ. ก่อนเปิดโครงการ
+    </Card>
+
+  </Step>
+  <Step
+    title="เขียนใบโครงการ"
+    icon="pencil"
+    iconType="solid"
+  >
+    <Card
+      title="การเขียนใบเปิดโครงการ"
+      icon="file-pen"
+      href="/sop/project/open/doc"
+      horizontal
+    >
+      ขั้นตอนและคำแนะนำในการเขียนเอกสารโครงการ เทมเพลตเอกสาร
+    </Card>
+  </Step>
+  <Step
+    title="2nd Meeting with SMSU"
+    stepNumber={2}
+  >
+    1. พูดคุยเรื่องแนวทางการบรรลุวัตถุประสงค์โครงการ
+    2. พูดคุยเกี่ยวกับรายละเอียดกิจกรรม และแนวทางการแก้ไขปัญหา
+    3. ตรวจสอบและ**แก้ไขเอกสารใบโครงการ**
+  </Step>
+  <Step
+    title="อุปฯ ตรวจสอบใบโครงการจนผ่าน"
+    icon="magnifying-glass"
+    iconType="solid"
+  />
+  <Step
+    title="ส่งเอกสารใบโครงการเข้าระบบ Project Pitching"
+    stepNumber={3}
+  >
+    1. ประธานโครงการตรวจสอบเอกสารโครงการ
+    2. ประธานโครงการและอาจารย์ที่ปรึกษาลงนาม
+    3. ส่งเอกสารผ่านทาง Google Forms เข้าระบบ Project Pitching
+    
+    <Card
+      title="เอกสารเปิดโครงการทั้งหมด"
+      icon="files"
+      href="/sop/project/open"
+      horizontal
+    >
+      ใบปะหน้า ใบเปิดโครงการ ใบเปรียบเทียบงบ
+    </Card>
+  </Step>
+  <Step
+    title="ตรวจเอกสารใบโครงการ"
+    stepNumber={4}
+  >
+    ```mermaid
+    flowchart LR
+    director(ประธานโครงการ
+    ส่งเอกสาร)
+    subgraph pitch[Pitching System]
+      review(PDC R&D Treasury
+      ตรวจเอกสาร)
+      pitchday{Pitching Day}
+    end
+    complete(เอกสารสมบูรณ์)
+    sisd([งานกิจการนักศึกษา])
+
+    director --> pitch
+    review --นัดวัน--> pitchday
+    pitch --> complete
+    complete --> sisd
+    ```
+
+    <Card
+      title="Pitching System"
+      icon="chart-user"
+      href="/sop/project/pitching"
+      horizontal
+    >
+      ขั้นตอนและเวลาที่ใช้พิจารณาโครงการ
+    </Card>
+
+  </Step>
+  <Step
+    title="ระหว่างโครงการ"
+    stepNumber={5}
+  >
+    อุปนายกฝ่ายกิจกรรมให้คำปรึกษาและความช่วยเหลือประธานโครงการทำจดหมายต่าง ๆ
+  </Step>
+  <Step
+    title="จัดกิจกรรมตามที่ได้วางแผนไว้"
+    icon="rocket-launch"
+    iconType="solid"
+  />
+  <Step
+    title="ปิดโครงการ"
+    stepNumber={6}
+  >
+    1. ประธานส่งเอกสารปิดโครงการ ผลประเมินกิจกรรม รายชื่อผู้จัดและผู้เข้าร่วมโครงการ
+    2. Session reflection กิจกรรม
+    3. Reflection ฐานข้อมูลและการทำงานอุปกิจกรรม
+
+    <Warning>
+      ต้องปิดโครงการหลังจบโครงการไม่เกิน 1 เดือน
+    </Warning>
+
+  </Step>
+  <Step
+    icon="flag-checkered"
+    iconType="solid"
+  />
+</Steps>
