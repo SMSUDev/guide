@@ -42,7 +42,7 @@
                       "sop/project/open/doc/4-participant",
                       "sop/project/open/doc/5-location",
                       "sop/project/open/doc/6-workplan",
-                      "sop/project/open/doc/7-at",
+                      "sop/project/open/doc/7-acttype",
                       "sop/project/open/doc/8-kpi",
                       "sop/project/open/doc/9-finance",
                       "sop/project/open/doc/full"
@@ -53,6 +53,10 @@
               },
               "sop/project/pitching"
             ]
+          },
+          {
+            "group": "Facilities",
+            "pages": ["sop/facilities/room", "sop/facilities/zoom"]
           }
         ]
       },
