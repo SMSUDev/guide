@@ -44,8 +44,7 @@
                       "sop/project/open/doc/6-workplan",
                       "sop/project/open/doc/7-acttype",
                       "sop/project/open/doc/8-goal",
-                      "sop/project/open/doc/9-finance",
-                      "sop/project/open/doc/full"
+                      "sop/project/open/doc/9-finance"
                     ]
                   },
                   "sop/project/open/finance"
@@ -53,6 +52,10 @@
               },
               "sop/project/pitching"
             ]
+          },
+          {
+            "group": "เลขานุการ",
+            "pages": ["sop/sec/letter"]
           },
           {
             "group": "Facilities",
@@ -102,12 +105,7 @@
         "label": "Support",
         "href": "mailto:dev@smsu.in.th"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Management System",
-      "href": "https://guide.smsu.in.th"
-    }
+    ]
   },
   "footer": {
     "socials": {

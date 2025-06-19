@@ -8,7 +8,7 @@ mode: 'custom'
 export const HeroCard = ({ filename, title, description, href, span }) => {
   return (
     <a
-      className="group cursor-pointer rounded-2xl border border-[#0FA461]/25 bg-[#0FA461]/15 p-6 transition-colors hover:border-[#0FA461] hover:bg-[#0FA461]/25 sm:col-span-1"
+      className="group cursor-pointer rounded-2xl border border-[#0FA461]/25 bg-[#0FA461]/15 p-6 backdrop-blur transition-colors hover:border-[#0FA461] hover:bg-[#0FA461]/25 sm:col-span-1"
       style={{
         gridColumn: span ? '1 / -1' : 'span 1',
       }}
@@ -45,13 +45,21 @@ export const HeroCardGroup = ({ title, description, children }) => {
 <div className="relative">
   <div className="absolute top-0 left-0 right-0 -z-10">
     <img
-      src="/images/hero/header-bg.webp"
-      className="w-full block pointer-events-none opacity-50 dark:opacity-30"
+      src="https://assets.smsu.in.th/guide/home/header_light.webp"
+      className="w-full block dark:hidden pointer-events-none opacity-80"
     />
+    <img
+      src="https://assets.smsu.in.th/guide/home/header_dark.webp"
+      className="w-full hidden dark:block pointer-events-none opacity-60"
+    />
+    <div className="absolute inset-0 -bottom-20 bg-gradient-to-b from-sky-100/50 to-transparent dark:from-amber-950/50 dark:to-transparent" />
   </div>
 
   <div className="px-4 pt-16 sm:pt-20 max-w-3xl mx-auto">
-    <h1 className="text-4xl font-semibold text-center text-gray-900 dark:text-zinc-50 tracking-tight">
+    <h1
+      data-text="SMSU One Stop Guide"
+      className="text-4xl font-semibold text-center text-gray-900 dark:text-zinc-50 tracking-tight webtitle"
+    >
       SMSU One Stop Guide
     </h1>
 
@@ -131,9 +139,16 @@ export const HeroCardGroup = ({ title, description, children }) => {
 
 </div>
 
-<img
-  src="/images/hero/footer-bg.webp"
-  className="pointer-events-none block w-full opacity-50 dark:opacity-30"
-/>
+<div className="relative">
+  <img
+    src="https://assets.smsu.in.th/guide/home/footer_light.webp"
+    className="pointer-events-none block w-full opacity-80 dark:hidden"
+  />
+  <img
+    src="https://assets.smsu.in.th/guide/home/footer_dark.webp"
+    className="pointer-events-none hidden w-full opacity-60 dark:block"
+  />
+  {/* <div className="absolute inset-0 -top-20 -z-10 bg-gradient-to-t from-emerald-100/50 to-transparent dark:from-slate-800/50 dark:to-transparent" /> */}
+</div>
 
 </div>
