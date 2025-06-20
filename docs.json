@@ -52,6 +52,7 @@
                 ]
               },
               "sop/project/pitching",
+              "sop/project/form",
               {
                 "group": "สรุปปิดโครงการ",
                 "icon": "flag-checkered",
