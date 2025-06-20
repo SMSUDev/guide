@@ -18,11 +18,15 @@ end
 subgraph pitch[Pitching System]
 direction TB
   subgraph committee["**ตรวจเอกสาร** (WEEK 1)"]
-    sec(เลขานุการตรวจ
+    start@{ shape: sm-circ }
+    sec(เลขานุการ ตรวจ
     format และภาษา)
-    pdc(PDC ตรวจ objective)
-    rd(R&D ตรวจ KPI)
-    fin(Finance ตรวจงบประมาณ)
+    pdc(PDC
+    ตรวจ objective)
+    rd(R&D
+    ตรวจตัวชี้วัด)
+    fin(Finance
+    ตรวจงบประมาณ)
   end
   pitchday{"**Pitching Day**
   (WEEK 2 MON)"}
@@ -36,8 +40,8 @@ sisd([งานกิจการนักศึกษา])
 oops <--พูดคุยและปรับแก้--> director
 advisor <--พูดคุยและลงนาม--> director
 director --ส่งเอกสาร--> pitch
-sec --> pdc & rd & fin
-pdc & rd & fin --> pitchday
+start --> sec & pdc & rd & fin
+sec & pdc & rd & fin --> pitchday
 pitchday --> comment
 pitch --อุปนายกและนายกลงนาม--> complete
 complete --เลขาฯ ส่งเอกสาร--> sisd

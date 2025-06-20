@@ -44,13 +44,41 @@
                       "sop/project/open/doc/6-workplan",
                       "sop/project/open/doc/7-acttype",
                       "sop/project/open/doc/8-goal",
-                      "sop/project/open/doc/9-finance"
+                      "sop/project/open/doc/9-finance",
+                      "sop/project/open/doc/sign"
                     ]
                   },
                   "sop/project/open/finance"
                 ]
               },
-              "sop/project/pitching"
+              "sop/project/pitching",
+              {
+                "group": "สรุปปิดโครงการ",
+                "icon": "flag-checkered",
+
+                "pages": [
+                  "sop/project/close/index",
+                  "sop/project/close/cover",
+                  {
+                    "group": "ใบสรุปโครงการ",
+                    "pages": [
+                      "sop/project/close/doc/index",
+                      "sop/project/close/doc/0-cover",
+                      "sop/project/close/doc/1-3",
+                      "sop/project/close/doc/4-5",
+                      "sop/project/close/doc/6-finance",
+                      "sop/project/close/doc/7-evaluation",
+                      "sop/project/close/doc/8-result",
+                      "sop/project/close/doc/9-summary",
+                      "sop/project/close/doc/10-issue",
+                      "sop/project/close/doc/sign",
+                      "sop/project/close/doc/appendix"
+                    ]
+                  },
+                  "sop/project/close/io",
+                  "sop/project/close/namelist"
+                ]
+              }
             ]
           },
           {
