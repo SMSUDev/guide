@@ -82,6 +82,27 @@
             ]
           },
           {
+            "group": "PR",
+            "pages": [
+              "sop/pr/index",
+              {
+                "group": "Admin",
+                "icon": "hashtag",
+                "pages": ["sop/pr/admin/bookcontent", "sop/pr/admin/lineoa", "sop/pr/admin/igpost"]
+              },
+              {
+                "group": "Strategy",
+                "icon": "bullseye-pointer",
+                "pages": ["sop/pr/strategy/calendar"]
+              },
+              {
+                "group": "graphics",
+                "icon": "image",
+                "pages": ["sop/pr/graphics/madetoorder", "sop/pr/graphics/templateig"]
+              }
+            ]
+          },
+          {
             "group": "เลขานุการ",
             "pages": ["sop/sec/letter"]
           },
