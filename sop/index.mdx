@@ -49,10 +49,18 @@ icon: 'books'
     ระบบพิจารณาโครงการ
   </Card>
   <Card
-    title="ระหว่างโครงการ"
-    icon="screwdriver-wrench"
+    title="การเงิน"
+    icon="money-bill"
+    href="/sop/project/finance"
   >
-    การทำจดหมาย การขอสิ่งของ/สถานที่ ติดต่อเจ้าหน้าที่
+    การเบิกเงินโครงการ
+  </Card>
+  <Card
+    title="ขอสิ่งของและสถานที่"
+    icon="boxes-packing"
+    href="/sop/project/itemrequest"
+  >
+    ช่องทางติดต่อ การเขียนจดหมายขอสิ่งของ และขอใช้สถานที่ของคณะฯ
   </Card>
   <Card
     title="ฟอร์มประเมินกิจกรรม"
@@ -61,12 +69,114 @@ icon: 'books'
   >
     การสร้างฟอร์มประเมินหลังจบกิจกรรม
   </Card>
+</CardGroup>
+<Card
+  title="ปิดโครงการ"
+  icon="flag-checkered"
+  iconType="solid"
+  href="/sop/project/close"
+>
+  เอกสารที่จำเป็นต้องใช้ และวิธีการเขียนเอกสารปิดโครงการอย่างละเอียด
+</Card>
+
+## เลขานุการ
+
+<Card
+  title="จดหมาย"
+  icon="file-import"
+  href="/sop/sec/letter"
+>
+  Flow จดหมาย วิธีการเขียน และเทมเพลตจดหมาย
+</Card>
+
+## PR
+
+<Card
+  title="PR Overview"
+  icon="megaphone"
+  href="/sop/pr"
+>
+  ภาพรวมการทำงานของฝ่ายสื่อสารองค์กร (PR)
+</Card>
+
+### Admin
+
+<Card
+  title="การจองข่าว"
+  icon="photo-film-music"
+  href="/sop/pr/admin/bookcontent"
+  horizontal
+/>
+<CardGroup>
   <Card
-    title="ปิดโครงการ"
-    icon="flag-checkered"
-    iconType="solid"
-    href="/sop/project/close"
+    title="Line Official"
+    icon="line"
+    href="/sop/pr/admin/lineoa"
+    horizontal
+  />
+  <Card
+    title="IG Post"
+    icon="instagram"
+    href="/sop/pr/admin/igpost"
+    horizontal
+  />
+</CardGroup>
+
+### Strategy
+
+<Card
+  title="SMSU Calendar"
+  icon="calendar"
+  href="/sop/pr/strategy/calendar"
+  horizontal
+/>
+
+### Graphics
+
+<CardGroup>
+  <Card
+    title="Made to order Graphics"
+    icon="pencil-mechanical"
+    href="/sop/pr/graphics/madetoorder"
+    horizontal
+  />
+  <Card
+    title="Template IG post"
+    icon="file-vector"
+    href="/sop/pr/graphics/templateig"
+    horizontal
+  />
+</CardGroup>
+
+## Assets
+
+<CardGroup cols={2}>
+  <Card
+    title="จองห้อง"
+    icon="person-chalkboard"
+    href="/sop/assets/room"
   >
-    เอกสารที่จำเป็นต้องใช้ และวิธีการเขียนเอกสารปิดโครงการอย่างละเอียด
+    ห้องประชุมหอมหิตฯ, ห้องสพศ.
+  </Card>
+  <Card
+    title="จอง Zoom"
+    icon="video"
+    href="/sop/assets/zoom"
+  >
+    Zoom สพศ., Zoom งานกิจฯ
+  </Card>
+  <Card
+    title="ยืมอุปกรณ์ห้อง สพศ."
+    icon="hand-holding-box"
+    href="/sop/assets/borrow"
+  >
+    ขั้นตอนการยืมและคืนอุปกรณ์ห้อง สพศ.
+  </Card>
+  <Card
+    title="ฝากอุปกรณ์ห้อง สพศ."
+    icon="warehouse-full"
+    href="/sop/assets/storage"
+  >
+    ขั้นตอนและข้อกำหนดการฝากอุปกรณ์ห้อง สพศ. ทั้งระยะสั้นและระยะยาว
   </Card>
 </CardGroup>

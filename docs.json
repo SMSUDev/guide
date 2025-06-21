@@ -44,7 +44,8 @@
                       "sop/project/open/doc/6-workplan",
                       "sop/project/open/doc/7-acttype",
                       "sop/project/open/doc/8-goal",
-                      "sop/project/open/doc/9-finance",
+                      "sop/project/open/doc/9-smsuitem",
+                      "sop/project/open/doc/10-finance",
                       "sop/project/open/doc/sign"
                     ]
                   },
@@ -89,6 +90,10 @@
             ]
           },
           {
+            "group": "เลขานุการ",
+            "pages": ["sop/sec/letter"]
+          },
+          {
             "group": "PR",
             "pages": [
               "sop/pr/index",
@@ -108,10 +113,6 @@
                 "pages": ["sop/pr/graphics/madetoorder", "sop/pr/graphics/templateig"]
               }
             ]
-          },
-          {
-            "group": "เลขานุการ",
-            "pages": ["sop/sec/letter"]
           },
           {
             "group": "Assets",
