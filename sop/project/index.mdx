@@ -133,7 +133,22 @@ icon: 'diagram-project'
     title="จัดกิจกรรมตามที่ได้วางแผนไว้"
     icon="rocket-launch"
     iconType="solid"
-  />
+  >
+    <CardGroup>
+      <Card
+        title="การเงิน"
+        icon="money-bill"
+        href="/sop/project/finance"
+        horizontal
+      />
+      <Card
+        title="ขอสิ่งของและสถานที่"
+        icon="boxes-packing"
+        href="/sop/project/itemrequest"
+        horizontal
+      />
+    </CardGroup>
+  </Step>
   <Step
     title="ปิดโครงการ"
     stepNumber={6}
@@ -145,7 +160,12 @@ icon: 'diagram-project'
     <Warning>
       ต้องปิดโครงการหลังจบโครงการไม่เกิน 1 เดือน
     </Warning>
-
+    <Card
+      title="ฟอร์มประเมินหลังจบกิจกรรม"
+      icon="square-list"
+      href="/sop/project/form"
+      horizontal
+    />
     <Card
       title="เอกสารสรุปปิดโครงการทั้งหมด"
       icon="flag-checkered"

@@ -57,6 +57,7 @@
                 "icon": "money-bill",
                 "pages": ["sop/project/finance/index"]
               },
+              "sop/project/itemrequest",
               "sop/project/form",
               {
                 "group": "สรุปปิดโครงการ",
