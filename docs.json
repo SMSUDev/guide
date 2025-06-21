@@ -52,6 +52,11 @@
                 ]
               },
               "sop/project/pitching",
+              {
+                "group": "การเงิน",
+                "icon": "money-bill",
+                "pages": ["sop/project/finance/index"]
+              },
               "sop/project/form",
               {
                 "group": "สรุปปิดโครงการ",
@@ -97,7 +102,7 @@
                 "pages": ["sop/pr/strategy/calendar"]
               },
               {
-                "group": "graphics",
+                "group": "Graphics",
                 "icon": "image",
                 "pages": ["sop/pr/graphics/madetoorder", "sop/pr/graphics/templateig"]
               }
@@ -108,8 +113,17 @@
             "pages": ["sop/sec/letter"]
           },
           {
-            "group": "Facilities",
-            "pages": ["sop/facilities/room", "sop/facilities/zoom"]
+            "group": "Assets",
+            "pages": [
+              "sop/assets/room",
+              "sop/assets/zoom",
+              "sop/assets/borrow",
+              "sop/assets/storage"
+            ]
+          },
+          {
+            "group": "HR",
+            "pages": ["sop/hr/index", "sop/hr/feedback", "sop/hr/consult"]
           }
         ]
       },
