@@ -32,11 +32,23 @@ export const HeroCard = ({ filename, title, description, href, span }) => {
   );
 };
 
-export const HeroCardGroup = ({ title, description, children }) => {
+export const HeroCardGroup = ({ title, description, href, children }) => {
   return (
     <div className="flex flex-col">
-      <h2 className="text-2xl font-semibold text-gray-900 dark:text-zinc-50">{title}</h2>
-      {description && <span className="mt-1 text-gray-500 dark:text-zinc-500">{description}</span>}
+      <a
+        className="group flex flex-col"
+        href={href || '#'}
+      >
+        <div className="flex items-center gap-1">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-zinc-50">{title}</h2>
+          <div className="flex items-center justify-center transition-transform group-hover:translate-x-1">
+            <Icon icon="chevron-right" />
+          </div>
+        </div>
+        {description && (
+          <span className="mt-1 text-gray-500 dark:text-zinc-500">{description}</span>
+        )}
+      </a>
       <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">{children}</div>
     </div>
   );
@@ -70,7 +82,7 @@ export const HeroCardGroup = ({ title, description, children }) => {
 
   <div className="px-6 lg:px-0 mt-12 lg:mt-16 flex flex-col gap-10">
 
-    <HeroCardGroup title="SOP" description="Standard Operating Procedures">
+    <HeroCardGroup title="SOP" description="Standard Operating Procedures" href="/sop">
       <HeroCard
         title="Quick Links"
         description="รวมลิงก์ใน SOP สำหรับใช้งานอย่างรวดเร็ว"
@@ -83,14 +95,24 @@ export const HeroCardGroup = ({ title, description, children }) => {
         href="/sop/project"
       />
       <HeroCard
+        title="การเงิน"
+        description="เบิกเงิน เขียนใบเสร็จ อัตราราคากลาง"
+        href="/sop/project/finance"
+      />
+      <HeroCard
         title="จดหมาย"
         description="การเขียนจดหมาย และ Flow ส่งจดหมาย"
         href="/sop/sec/letter"
       />
       <HeroCard
         title="PR"
-        description="การจองข่าว ขอทำกราฟิก ช่วยทำ Content"
+        description="จองข่าว ขอทำกราฟิก ช่วยทำ Content"
         href="/sop/pr"
+      />
+      <HeroCard
+        title="Assets"
+        description="จองห้อง จอง Zoom ยืม/ฝากอุปกรณ์ สพศ."
+        href="/sop/assets"
       />
       <HeroCard
         title="HR"
@@ -122,7 +144,7 @@ export const HeroCardGroup = ({ title, description, children }) => {
       />
     </HeroCardGroup> */}
 
-    <HeroCardGroup title="การใช้งาน">
+    <HeroCardGroup title="การใช้งาน" href={"/it/guide"}>
       <HeroCard
         title="แนะนำการใช้งาน"
         description="เริ่มต้นใช้งาน One Stop Guide ฉบับนี้"
