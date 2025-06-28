@@ -86,7 +86,8 @@
                   "sop/project/close/io",
                   "sop/project/close/namelist"
                 ]
-              }
+              },
+              "sop/project/yearplan"
             ]
           },
           {
