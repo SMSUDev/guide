@@ -112,6 +112,11 @@
                 "group": "Graphics",
                 "icon": "image",
                 "pages": ["sop/pr/graphics/madetoorder", "sop/pr/graphics/templateig"]
+              },
+              {
+                "group": "Content Creator",
+                "icon": "paintbrush-pencil",
+                "pages": ["sop/pr/contentcreator/consult"]
               }
             ]
           },
