@@ -139,6 +139,10 @@
         "tab": "IT",
         "groups": [
           {
+            "group": "Network",
+            "pages": ["it/network/index", "it/network/wifi"]
+          },
+          {
             "group": "One Stop Guide",
             "pages": [
               "it/guide/index",
@@ -184,5 +188,51 @@
       "instagram": "https://www.instagram.com/smsusiriraj",
       "facebook": "https://www.facebook.com/smsusiriraj"
     }
+  },
+  "contextual": {
+    "options": [
+      {
+        "title": "Share",
+        "description": "แชร์ลิงก์หน้านี้",
+        "icon": "share",
+        "href": {
+          "base": "https://link.smsu.in.th/guide/share",
+          "query": [
+            {
+              "key": "path",
+              "value": "$path"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Share to Line",
+        "description": "แชร์ลิงก์หน้านี้ไปยังไลน์",
+        "icon": "line",
+        "href": {
+          "base": "https://line.me/R/share",
+          "query": [
+            {
+              "key": "text",
+              "value": "https://guide.smsu.in.th$path"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Share to Instagram",
+        "description": "แชร์ลิงก์หน้านี้ไปยัง Instagram DM",
+        "icon": "instagram",
+        "href": {
+          "base": "instagram://sharesheet",
+          "query": [
+            {
+              "key": "text",
+              "value": "https://guide.smsu.in.th$path"
+            }
+          ]
+        }
+      }
+    ]
   }
 }
