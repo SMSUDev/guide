@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
+  "theme": "almond",
   "name": "SMSU One Stop Guide",
   "colors": {
     "primary": "#0FA462",
@@ -139,6 +139,10 @@
         "tab": "IT",
         "groups": [
           {
+            "group": "About",
+            "pages": ["it/index"]
+          },
+          {
             "group": "Network",
             "pages": ["it/network/index", "it/network/wifi"]
           },
@@ -178,8 +182,8 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:dev@smsu.in.th"
+        "label": "Follow us",
+        "href": "https://www.instagram.com/smsusiriraj/"
       }
     ]
   },
