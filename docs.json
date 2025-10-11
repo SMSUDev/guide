@@ -123,6 +123,7 @@
           {
             "group": "Assets",
             "pages": [
+              "sop/assets/index",
               "sop/assets/room",
               "sop/assets/zoom",
               "sop/assets/borrow",
