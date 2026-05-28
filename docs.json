@@ -106,7 +106,7 @@
               {
                 "group": "Strategy",
                 "icon": "bullseye-pointer",
-                "pages": ["sop/pr/strategy/calendar"]
+                "pages": []
               },
               {
                 "group": "Graphics",
@@ -116,7 +116,7 @@
               {
                 "group": "Content Creator",
                 "icon": "paintbrush-pencil",
-                "pages": ["sop/pr/contentcreator/consult"]
+                "pages": []
               }
             ]
           },
