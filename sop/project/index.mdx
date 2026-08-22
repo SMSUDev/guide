@@ -1,7 +1,7 @@
 ---
-title: การดำเนินโครงการ
-description: 'ภาพรวมและขั้นตอนในการทำโครงการ'
-icon: 'diagram-project'
+title: "การดำเนินโครงการ"
+description: "ภาพรวมและขั้นตอนในการทำโครงการ"
+icon: "diagram-project"
 ---
 
 ## ทำไมต้องเปิดโครงการ?
@@ -10,159 +10,92 @@ icon: 'diagram-project'
 2. อยากให้**ชั่วโมงจัดกิจกรรม (AT)** สำหรับผู้จัดกิจกรรมหรือผู้เข้าร่วมกิจกรรม
 3. กิจกรรมที่ต้องได้รับการอนุมัติจากคณะ เช่น ขอสถานที่ ขอความร่วมมือกับทางหน่วยงานต่าง ๆ ในศิริราช
 
-<Tip>ควรรู้ก่อนเปิดโครงการ : [Year Plan (แผนการจัดโครงการ สพศ.)](/sop/project/yearplan)</Tip>
+<Tip>
+  ควรรู้ก่อนเปิดโครงการ : [Year Plan (แผนการจัดโครงการ สพศ.)](/sop/project/yearplan)
+</Tip>
 
 ## ขั้นตอนการดำเนินโครงการ
 
 <Steps>
-  <Step
-    title="ประธานโครงการ"
-    icon="user-tie"
-    iconType="solid"
-  />
-  <Step
-    title="เริ่มโครงการ"
-    icon="star"
-    iconType="solid"
-  >
+  <Step title="ประธานโครงการ" icon="user-tie" iconType="solid">
+  </Step>
+  <Step title="เริ่มโครงการ" icon="star" iconType="solid">
     1. คุยกับประธานโครงการปีที่แล้ว (ถ้ามี)
     2. คุยกับอาจารย์ที่ปรึกษาโครงการ
     3. รับ core team
     4. คิดรายละเอียดกิจกรรม
   </Step>
-  <Step
-    title="1st Meeting with SMSU"
-    stepNumber={1}
-  >
+  <Step title="1st Meeting with SMSU" stepNumber={1}>
     1. พูดคุยเรื่องเป้าหมาย แนวทางจัดกิจกรรม กับ**อุปนายกฝ่ายที่เกี่ยวข้อง**
     2. อธิบายแนวทางการทำโครงการ
     3. อธิบายการเขียนเอกสารโครงการ
     4. ชี้แจงงบประมาณและฐานข้อมูล
 
-    <Card
-      title="Meeting with SMSU"
-      icon="comments-question-check"
-      href="/sop/project/meetsmsu"
-      horizontal
-    >
+    <Card title="Meeting with SMSU" icon="comments-question-check" horizontal href="/sop/project/meetsmsu">
       การเตรียมตัวก่อนมาคุย และการพูดคุยกับสพศ. ก่อนเปิดโครงการ
     </Card>
-
   </Step>
-  <Step
-    title="เขียนใบโครงการ"
-    icon="pencil"
-    iconType="solid"
-  >
-    <Card
-      title="การเขียนใบเปิดโครงการ"
-      icon="file-pen"
-      href="/sop/project/open/doc"
-      horizontal
-    >
+  <Step title="เขียนใบโครงการ" icon="pencil" iconType="solid">
+    <Card title="การเขียนใบเปิดโครงการ" icon="file-pen" horizontal href="/sop/project/open/doc">
       ขั้นตอนและคำแนะนำในการเขียนเอกสารโครงการ เทมเพลตเอกสาร
     </Card>
   </Step>
-  <Step
-    title="2nd Meeting with SMSU"
-    stepNumber={2}
-  >
+  <Step title="2nd Meeting with SMSU" stepNumber={2}>
     1. พูดคุยเรื่องแนวทางการบรรลุวัตถุประสงค์โครงการ
     2. พูดคุยเกี่ยวกับรายละเอียดกิจกรรม และแนวทางการแก้ไขปัญหา
     3. ตรวจสอบและ**แก้ไขเอกสารใบโครงการ**
   </Step>
-  <Step
-    title="อุปฯ ตรวจสอบใบโครงการจนผ่าน"
-    icon="magnifying-glass"
-    iconType="solid"
-  />
-  <Step
-    title="ส่งเอกสารใบโครงการเข้าระบบ Project Pitching"
-    stepNumber={3}
-  >
+  <Step title="อุปฯ ตรวจสอบใบโครงการจนผ่าน" icon="magnifying-glass" iconType="solid">
+  </Step>
+  <Step title="ส่งเอกสารใบโครงการเข้าระบบ Project Pitching" stepNumber={3}>
     1. ประธานโครงการตรวจสอบเอกสารโครงการ
     2. ประธานโครงการและอาจารย์ที่ปรึกษาลงนาม
     3. ส่งเอกสารผ่านทาง Google Forms เข้าระบบ Project Pitching
-    
-    <Card
-      title="เอกสารเปิดโครงการทั้งหมด"
-      icon="files"
-      href="/sop/project/open"
-      horizontal
-    >
+
+    <Card title="เอกสารเปิดโครงการทั้งหมด" icon="files" horizontal href="/sop/project/open">
       ใบปะหน้า ใบเปิดโครงการ ใบเปรียบเทียบงบ
     </Card>
   </Step>
-  <Step
-    title="ตรวจเอกสารใบโครงการ"
-    stepNumber={4}
-  >
+  <Step title="ตรวจเอกสารใบโครงการ" stepNumber={4}>
     ```mermaid
     flowchart LR
-    director(ประธานโครงการ
-    ส่งเอกสาร)
-    subgraph pitch[Pitching System]
-      review(PDC R&D Treasury
-      ตรวจเอกสาร)
-      pitchday{Pitching Day}
-    end
-    complete(เอกสารสมบูรณ์)
-    sisd([งานกิจการนักศึกษา])
+director(ประธานโครงการ
+ส่งเอกสาร)
+subgraph pitch[Pitching System]
+  review(PDC R&D Treasury
+  ตรวจเอกสาร)
+  pitchday{Pitching Day}
+end
+complete(เอกสารสมบูรณ์)
+sisd([งานกิจการนักศึกษา])
 
-    director --> pitch
-    review --นัดวัน--> pitchday
-    pitch --> complete
-    complete --> sisd
+director --> pitch
+review --นัดวัน--> pitchday
+pitch --> complete
+complete --> sisd
     ```
 
     <Frame caption="Flow โครงการ">
-      <iframe
-        className="aspect-video w-full rounded-xl"
-        src="https://drive.google.com/file/d/1iJBrUqqYQTWYkfhTb49mtzBWK-g-fJ34/preview"
-        allow="autoplay"
-      />
+      <iframe className="aspect-video w-full rounded-xl" src="https://drive.google.com/file/d/1iJBrUqqYQTWYkfhTb49mtzBWK-g-fJ34/preview" allow="autoplay" />
     </Frame>
 
-    <Card
-      title="Pitching System"
-      icon="chart-user"
-      href="/sop/project/pitching"
-      horizontal
-    >
+    <Card title="Pitching System" icon="chart-user" horizontal href="/sop/project/pitching">
       ขั้นตอนและเวลาที่ใช้พิจารณาโครงการ
     </Card>
-
   </Step>
-  <Step
-    title="ระหว่างโครงการ"
-    stepNumber={5}
-  >
+  <Step title="ระหว่างโครงการ" stepNumber={5}>
     อุปนายกฝ่ายกิจกรรมให้คำปรึกษาและความช่วยเหลือประธานโครงการทำจดหมายต่าง ๆ
   </Step>
-  <Step
-    title="จัดกิจกรรมตามที่ได้วางแผนไว้"
-    icon="rocket-launch"
-    iconType="solid"
-  >
+  <Step title="จัดกิจกรรมตามที่ได้วางแผนไว้" icon="rocket-launch" iconType="solid">
     <CardGroup>
-      <Card
-        title="การเงิน"
-        icon="money-bill"
-        href="/sop/project/finance"
-        horizontal
-      />
-      <Card
-        title="ขอสิ่งของและสถานที่"
-        icon="boxes-packing"
-        href="/sop/project/itemrequest"
-        horizontal
-      />
+      <Card title="การเงิน" icon="money-bill" horizontal href="/sop/project/finance">
+      </Card>
+
+      <Card title="ขอสิ่งของและสถานที่" icon="boxes-packing" horizontal href="/sop/project/itemrequest">
+      </Card>
     </CardGroup>
   </Step>
-  <Step
-    title="ปิดโครงการ"
-    stepNumber={6}
-  >
+  <Step title="ปิดโครงการ" stepNumber={6}>
     1. ประธานส่งเอกสารปิดโครงการ ผลประเมินกิจกรรม รายชื่อผู้จัดและผู้เข้าร่วมโครงการ
     2. Session reflection กิจกรรม
     3. Reflection ฐานข้อมูลและการทำงานอุปกิจกรรม
@@ -170,25 +103,14 @@ icon: 'diagram-project'
     <Warning>
       ต้องปิดโครงการหลังจบโครงการไม่เกิน 1 เดือน
     </Warning>
-    <Card
-      title="ฟอร์มประเมินหลังจบกิจกรรม"
-      icon="square-list"
-      href="/sop/project/form"
-      horizontal
-    />
-    <Card
-      title="เอกสารสรุปปิดโครงการทั้งหมด"
-      icon="flag-checkered"
-      iconType="solid"
-      href="/sop/project/close"
-      horizontal
-    >
-      ใบปะหน้า ใบสรุปโครงการ ใบ IO รายชื่อผู้เข้าร่วม/ผู้จัดกิจกรรม
+
+    <Card title="ฟอร์มประเมินหลังจบกิจกรรม" icon="square-list" horizontal href="/sop/project/form">
     </Card>
 
+    <Card title="เอกสารสรุปปิดโครงการทั้งหมด" icon="flag-checkered" iconType="solid" horizontal href="/sop/project/close">
+      ใบปะหน้า ใบสรุปโครงการ ใบ IO รายชื่อผู้เข้าร่วม/ผู้จัดกิจกรรม
+    </Card>
   </Step>
-  <Step
-    icon="flag-checkered"
-    iconType="solid"
-  />
+  <Step icon="flag-checkered" iconType="solid">
+  </Step>
 </Steps>
