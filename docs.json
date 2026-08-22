@@ -59,7 +59,6 @@
                 "pages": ["sop/project/finance/index"]
               },
               "sop/project/itemrequest",
-              "sop/project/form",
               {
                 "group": "สรุปปิดโครงการ",
                 "icon": "flag-checkered",
@@ -86,8 +85,7 @@
                   "sop/project/close/io",
                   "sop/project/close/namelist"
                 ]
-              },
-              "sop/project/yearplan"
+              }
             ]
           },
           {

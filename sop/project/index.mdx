@@ -25,46 +25,30 @@ icon: "diagram-project"
     3. รับ core team
     4. คิดรายละเอียดกิจกรรม
   </Step>
-  <Step title="1st Meeting with SMSU" stepNumber={1}>
-    1. พูดคุยเรื่องเป้าหมาย แนวทางจัดกิจกรรม กับ**อุปนายกฝ่ายที่เกี่ยวข้อง**
-    2. อธิบายแนวทางการทำโครงการ
-    3. อธิบายการเขียนเอกสารโครงการ
-    4. ชี้แจงงบประมาณและฐานข้อมูล
-
-    <Card title="Meeting with SMSU" icon="comments-question-check" horizontal href="/sop/project/meetsmsu">
-      การเตรียมตัวก่อนมาคุย และการพูดคุยกับสพศ. ก่อนเปิดโครงการ
-    </Card>
-  </Step>
   <Step title="เขียนใบโครงการ" icon="pencil" iconType="solid">
     <Card title="การเขียนใบเปิดโครงการ" icon="file-pen" horizontal href="/sop/project/open/doc">
       ขั้นตอนและคำแนะนำในการเขียนเอกสารโครงการ เทมเพลตเอกสาร
     </Card>
   </Step>
-  <Step title="2nd Meeting with SMSU" stepNumber={2}>
-    1. พูดคุยเรื่องแนวทางการบรรลุวัตถุประสงค์โครงการ
-    2. พูดคุยเกี่ยวกับรายละเอียดกิจกรรม และแนวทางการแก้ไขปัญหา
-    3. ตรวจสอบและ**แก้ไขเอกสารใบโครงการ**
-  </Step>
-  <Step title="อุปฯ ตรวจสอบใบโครงการจนผ่าน" icon="magnifying-glass" iconType="solid">
-  </Step>
   <Step title="ส่งเอกสารใบโครงการเข้าระบบ Project Pitching" stepNumber={3}>
     1. ประธานโครงการตรวจสอบเอกสารโครงการ
     2. ประธานโครงการและอาจารย์ที่ปรึกษาลงนาม
     3. ส่งเอกสารผ่านทาง Google Forms เข้าระบบ Project Pitching
+    4. โดยเมื่อส่งเข้าระบบ จะมี PDC & EE ทักไปหาผ่าน contact ที่กรอกมา เพื่อนัดวันเวลา Pitching ต่อไป \[หลักการนับว่าถ้าส่งเอกสารมาในระบบ จะได้เข้า Pitching วันไหน คือ ตัดรอบที่วันอาทิตย์เวลา 20.00 น. ถ้าส่งมาก่อนเวลานี้ จะได้เข้า Pitching ในวันจันทร์ถัดไป เช่น ถ้าส่งเอกสารมาในวันอาทิตย์ที่ 1 พฤษภาคม เวลา 19.50 น. จะได้เข้า Pitching ในวันจันทร์ที่ 9 พฤษภาคม ถ้าส่งมาหลังจากวันอาทิตย์ 20.00 น. จะได้เข้า Pitching ในวันจันทร์ 16 พฤษภาคม
 
     <Card title="เอกสารเปิดโครงการทั้งหมด" icon="files" horizontal href="/sop/project/open">
       ใบปะหน้า ใบเปิดโครงการ ใบเปรียบเทียบงบ
     </Card>
   </Step>
-  <Step title="ตรวจเอกสารใบโครงการ" stepNumber={4}>
+  <Step title="เข้า Pitching with SMSU" stepNumber={4}>
     ```mermaid
     flowchart LR
 director(ประธานโครงการ
 ส่งเอกสาร)
 subgraph pitch[Pitching System]
-  review(PDC R&D Treasury
-  ตรวจเอกสาร)
-  pitchday{Pitching Day}
+review(PDC Treasury
+ตรวจเอกสาร)
+pitchday{Pitching Day}
 end
 complete(เอกสารสมบูรณ์)
 sisd([งานกิจการนักศึกษา])
@@ -74,10 +58,6 @@ review --นัดวัน--> pitchday
 pitch --> complete
 complete --> sisd
     ```
-
-    <Frame caption="Flow โครงการ">
-      <iframe className="aspect-video w-full rounded-xl" src="https://drive.google.com/file/d/1iJBrUqqYQTWYkfhTb49mtzBWK-g-fJ34/preview" allow="autoplay" />
-    </Frame>
 
     <Card title="Pitching System" icon="chart-user" horizontal href="/sop/project/pitching">
       ขั้นตอนและเวลาที่ใช้พิจารณาโครงการ
